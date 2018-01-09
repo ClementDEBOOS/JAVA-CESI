@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
   register: Register = {
     mail: '',
     pwd: '',
-    phone: 0,
+    phone: '',
     name: ''
   }
 

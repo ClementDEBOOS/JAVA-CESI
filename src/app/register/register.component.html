@@ -1,15 +1,15 @@
 <div class="container">
-  <img src="/assets/Images/alternancehd.png" width="130" height="50">
+  <img src="/assets/Images/alternancehd.png" width="220" height="80">
   <div class="card card-container">
     <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
-    <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+    <img id="profile-img" class="profile-img-card" src="/assets/Images/Logo_cesi.png"/>
     <p id="profile-name" class="profile-name-card"></p>
     <form class="form-signin">
       <span id="reauth-email" class="reauth-email"></span>
+      <input type="text" id="inputName" class="form-control" placeholder="Nom d'utilisateur" [(ngModel)]="register.name" name="name" required>
       <input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" [(ngModel)]="register.mail" name="mail" required autofocus>
       <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" [(ngModel)]="register.pwd" name="pwd" required>
-      <input type="number" id="inputPhone" class="form-control" placeholder="Numéro de téléphone" [(ngModel)]="register.phone" name="phone" required><br>
-      <input type="text" id="inputName" class="form-control" placeholder="Nom d'utilisateur" [(ngModel)]="register.name" name="name" required>
+      <input type="tel" id="inputPhone" class="form-control" placeholder="Numéro de téléphone" [(ngModel)]="register.phone" name="phone" required><br>
       <div id="remember" class="checkbox">
         <label>
           <input type="checkbox" value="remember-me"> Se souvenir de moi
@@ -19,4 +19,3 @@
     </form><!-- /form -->
   </div><!-- /card-container -->
 </div><!-- /container -->
-
