@@ -21,4 +21,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
+  sendRegister() {
+    console.log(this.register.mail, this.register.pwd);
+  }
 }

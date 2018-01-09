@@ -10,10 +10,12 @@ import { RouterModule, Routes } from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'contact', component: ContactComponent },
 
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,16 @@
-/*
- * Specific styles of signin component
- */
-/*
- * General styles
- */
+h2   {color:white}
+p    {color:white}
+
 body, html {
   height: 100%;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+  /*background-image: linear-gradient(135deg, rgba(31,123,229,1) 0%, rgba(58,139,232,1) 47%, rgba(70,153,234,1) 92%, rgba(72,156,234,1) 100%);*/
+  background-image: url("http://p1.pichost.me/640/54/1777799.jpg");
+  background-size: 100% 100%;
 }
 
 .card-container.card {
-  max-width: 350px;
+  width: 350px;
   padding: 40px 40px;
 }
 
@@ -55,6 +54,13 @@ body, html {
 /*
  * Form styles
  */
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
 .profile-name-card {
   font-size: 16px;
   font-weight: bold;
@@ -108,8 +114,8 @@ body, html {
 
 .btn.btn-signin {
   /*background-color: #4d90fe; */
-  background-color: rgb(104, 145, 162);
-  /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+  /*background-color: rgb(104, 145, 162);
+  / background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
   padding: 0px;
   font-weight: 700;
   font-size: 14px;
@@ -124,11 +130,6 @@ body, html {
   transition: all 0.218s;
 }
 
-.btn.btn-signin:hover,
-.btn.btn-signin:active,
-.btn.btn-signin:focus {
-  background-color: rgb(12, 97, 33);
-}
 
 .forgot-password {
   color: rgb(104, 145, 162);

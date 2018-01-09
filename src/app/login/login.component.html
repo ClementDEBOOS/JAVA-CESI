@@ -1,8 +1,8 @@
 <div class="container">
-  <img src="/assets/Images/alternancehd.png" width="130" height="50">
+  <img class="image" src="/assets/Images/alternancehd.png" width="220" height="80">
   <div class="card card-container">
     <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
-    <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+    <img id="profile-img" class="profile-img-card" src="/assets/Images/student.png"/>
     <p id="profile-name" class="profile-name-card"></p>
     <form class="form-signin">
       <span id="reauth-email" class="reauth-email"></span>
@@ -13,13 +13,11 @@
           <input type="checkbox" value="remember-me"> Se souvenir de moi
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="sendLogin()" type="submit">Connexion</button>
+      <button class="btn btn-lg btn-success btn-block btn-signin" (click)="sendLogin()" type="submit">Connexion</button>
     </form><!-- /form -->
     <a href="#" class="forgot-password">
       Mot de passe oublié?
     </a>
   </div><!-- /card-container -->
-  <div><span>login: </span>{{login.mail}}</div>
-  <div><span>Password: </span>{{login.pwd}}</div>
 </div><!-- /container -->
 

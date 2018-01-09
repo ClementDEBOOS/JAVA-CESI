@@ -11,15 +11,16 @@ export class LoginComponent implements OnInit {
   login: Login = {
     mail: '',
     pwd: ''
-  }
+  };
 
   constructor() { }
 
   ngOnInit() {
 
   }
-  sendLogin(){
+  sendLogin() {
     console.log(this.login.mail, this.login.pwd);
+    // Fonction onchange regex
   }
 
 }
