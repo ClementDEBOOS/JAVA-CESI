@@ -12,11 +12,12 @@ export class FormCvComponent implements OnInit {
     last_name: '',
     first_name: '',
     address: '',
-    age: 0,
-    contry: '',
+    age: '',
+    country: '',
     mail: '',
     phone: '',
-    zip: ''
+    zip: '',
+    cv: ''
   };
 
   constructor() { }
@@ -24,4 +25,7 @@ export class FormCvComponent implements OnInit {
   ngOnInit() {
   }
 
+  sendForm() {
+
+  }
 }

@@ -1,41 +1,20 @@
 <div class="container">
-  <h1>Remplire ce formulaire</h1>
-  <form>
-    <div class="form-group">
-      <label for="name">Nom</label>
-      <input type="text" class="form-control" id="name" required [(ngModel)]="form.last_name" name="last_name" #name="ngModel">
-      <div [hidden]="name.valid || name.pristine"
-           class="alert alert-danger">
-        Le nom est invalide
-      </div>
-    </div>
+  <div class="card card-container">
+    <img id="profile-img" class="profile-img-card" src="/assets/Images/student.png"/>
+    <p id="profile-name" class="profile-name-card"></p>
+    <form class="form-signin">
+      <input type="text" id="inputLastName" class="form-control" placeholder="Nom" [(ngModel)]="form.last_name" name="last_name" required autofocus>
+      <input type="text" id="inputFisrtName" class="form-control" placeholder="Prénom" [(ngModel)]="form.first_name" name="fisrt_name" required>
+      <input type="email" id="inputMail" class="form-control" placeholder="Adresse mail" [(ngModel)]="form.mail" name="mail" required>
+      <input type="text" id="inputPhone" class="form-control" placeholder="Téléphone" [(ngModel)]="form.phone" name="phone" required>
+      <input type="text" id="inputAddress" class="form-control" placeholder="Adresse" [(ngModel)]="form.address" name="address" required>
+      <input type="text" id="inputZip" class="form-control" placeholder="Code postal" [(ngModel)]="form.zip" name="zip" required>
+      <input type="text" id="inputCountry" class="form-control" placeholder="Ville" [(ngModel)]="form.country" name="country" required>
+      <input type="text" id="inputAge" class="form-control" placeholder="Age" [(ngModel)]="form.age" name="age" required>
+      <input type="file" id="inputCv" class="form-control" placeholder="Insérer votre C.V." [(ngModel)]="form.cv" name="cv" required><br>
 
-    <div class="form-group">
-      <label for="prenom">Prénom</label>
-      <input type="text" class="form-control" id="prenom" [(ngModel)]="form.first_name">
-    </div>
-
-    <div class="form-group">
-      <label for="age">Age</label>
-      <input type="number" class="form-control" id="age" [(ngModel)]="form.age">
-    </div>
-
-    <div class="form-group">
-      <label for="phone">Phone</label>
-      <input type="tel" class="form-control" id="phone" [(ngModel)]="form.phone">
-    </div>
-
-    <div class="form-group">
-      <label for="mail">Adresse mail</label>
-      <input type="email" class="form-control" id="mail" [(ngModel)]="form.mail">
-    </div>
-
-    <div class="form-group">
-      <label for="adresse">Adresse</label>
-      <input type="text" class="form-control" id="adresse" [(ngModel)]="form.address">
-    </div>
-
-    <button type="submit" class="btn btn-success">Envoie</button>
-
-  </form>
+      <button class="btn btn-lg btn-success btn-block btn-signin" (click)="sendForm()" type="submit">Envoie du formulaire</button>
+    </form>
+  </div>
 </div>
+

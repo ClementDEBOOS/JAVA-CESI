@@ -12,14 +12,18 @@ import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormCvComponent } from './form-cv/form-cv.component';
+import { PasswordForgetComponent } from './password-forget/password-forget.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'form', component: FormCvComponent },
+  { path: 'pwdForget', component: PasswordForgetComponent },
+  { path: 'home', component: HomeComponent },
 
-  { path: '',   redirectTo: '/login', pathMatch: 'full' },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({
@@ -33,7 +37,9 @@ const appRoutes: Routes = [
     RegisterComponent,
     PageNotFoundComponent,
     ContactComponent,
-    FormCvComponent
+    FormCvComponent,
+    PasswordForgetComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

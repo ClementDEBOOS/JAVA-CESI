@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     // Fonction onchange regex
     if (this.login.mail === 'clement' && this.login.pwd === 'azerty') {
       this.router.navigate(['/form']);
-    }else{
+    }else {
       this.error = {
         title: 'Mauvais identifiant',
         text: 'Recommencer'

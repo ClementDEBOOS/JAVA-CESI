@@ -1,10 +1,11 @@
 export class Form {
   last_name: string;
   first_name: string;
-  age: number;
+  age: string;
   phone: string;
   mail: string;
   address: string;
   zip: string;
-  contry: string;
+  country: string;
+  cv: string;
 }
