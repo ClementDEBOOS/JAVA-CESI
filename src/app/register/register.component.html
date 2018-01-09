@@ -6,20 +6,17 @@
     <p id="profile-name" class="profile-name-card"></p>
     <form class="form-signin">
       <span id="reauth-email" class="reauth-email"></span>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" [(ngModel)]="login.mail" name="mail" required autofocus>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" [(ngModel)]="login.pwd" name="pwd" required>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" [(ngModel)]="register.mail" name="mail" required autofocus>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" [(ngModel)]="register.pwd" name="pwd" required>
+      <input type="number" id="inputPhone" class="form-control" placeholder="Numéro de téléphone" [(ngModel)]="register.phone" name="phone" required><br>
+      <input type="text" id="inputName" class="form-control" placeholder="Nom d'utilisateur" [(ngModel)]="register.name" name="name" required>
       <div id="remember" class="checkbox">
         <label>
           <input type="checkbox" value="remember-me"> Se souvenir de moi
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="sendLogin()" type="submit">Connexion</button>
+      <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="sendLogin()" type="submit">S'enregistrer</button>
     </form><!-- /form -->
-    <a href="#" class="forgot-password">
-      Mot de passe oublié?
-    </a>
   </div><!-- /card-container -->
-  <div><span>login: </span>{{login.mail}}</div>
-  <div><span>Password: </span>{{login.pwd}}</div>
 </div><!-- /container -->
 
