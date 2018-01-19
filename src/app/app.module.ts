@@ -16,6 +16,7 @@ import { PasswordForgetComponent } from './password-forget/password-forget.compo
 import { HomeComponent } from './home/home.component';
 import { LoginCesiComponent } from './login-cesi/login-cesi.component';
 import { ListStudentComponent } from './list-student/list-student.component';
+import {FilterArrayPipe} from './pipes/filter-array-pipe';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     PasswordForgetComponent,
     HomeComponent,
     LoginCesiComponent,
-    ListStudentComponent
+    ListStudentComponent,
+    FilterArrayPipe
   ],
   imports: [
     BrowserModule,
