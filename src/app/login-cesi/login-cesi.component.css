@@ -10,7 +10,7 @@ body, html {
 }
 
 .card-container.card {
-  width: 500px;
+  width: 350px;
   padding: 40px 40px;
 }
 
@@ -71,12 +71,11 @@ body, html {
 }
 
 .profile-name-card {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   margin: 10px 0 0;
   min-height: 1em;
-  color: darkcyan;
 }
 
 .reauth-email {
@@ -123,9 +122,9 @@ body, html {
 }
 
 .btn.btn-signin {
-  background-color: #4d90fe;
-  /*background-color: rgb(104, 145, 162);*/
-  /*background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+  /*background-color: #4d90fe; */
+  /*background-color: rgb(104, 145, 162);
+  / background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
   padding: 0px;
   font-weight: 700;
   font-size: 14px;
@@ -149,36 +148,4 @@ body, html {
 .forgot-password:active,
 .forgot-password:focus{
   color: rgb(12, 97, 33);
-}
-
-/*.rating a {
-  float: right;
-  color: #aaa;
-  text-decoration: none;
-  font-size: 1.7em;
-  transition: color .4s;
-}
-.rating a:hover,
-.rating a:focus,
-.rating a:hover ~ a,
-.rating a:focus ~ a {
-  color: orange;
-  cursor: pointer;
-}*/
-
-.rating {
-  direction: rtl;
-}
-.rating a {
-  color: #aaa;
-  text-decoration: none;
-  font-size: 1.7em;
-  transition: color .4s;
-}
-.rating a:hover,
-.rating a:focus,
-.rating a:hover ~ a,
-.rating a:focus ~ a {
-  color: orange;
-  cursor: pointer;
 }

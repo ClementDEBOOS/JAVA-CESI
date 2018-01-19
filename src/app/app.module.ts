@@ -14,6 +14,8 @@ import { ContactComponent } from './contact/contact.component';
 import { FormCvComponent } from './form-cv/form-cv.component';
 import { PasswordForgetComponent } from './password-forget/password-forget.component';
 import { HomeComponent } from './home/home.component';
+import { LoginCesiComponent } from './login-cesi/login-cesi.component';
+import { ListStudentComponent } from './list-student/list-student.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -22,6 +24,8 @@ const appRoutes: Routes = [
   { path: 'form', component: FormCvComponent },
   { path: 'pwdForget', component: PasswordForgetComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'loginCesi', component: LoginCesiComponent },
+  { path: 'listStudent', component: ListStudentComponent },
 
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
@@ -39,7 +43,9 @@ const appRoutes: Routes = [
     ContactComponent,
     FormCvComponent,
     PasswordForgetComponent,
-    HomeComponent
+    HomeComponent,
+    LoginCesiComponent,
+    ListStudentComponent
   ],
   imports: [
     BrowserModule,

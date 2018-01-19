@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Form} from '../form';
+import {$} from 'protractor';
 
 @Component({
   selector: 'app-form-cv',
@@ -24,7 +25,6 @@ export class FormCvComponent implements OnInit {
 
   ngOnInit() {
   }
-
   sendForm() {
 
   }

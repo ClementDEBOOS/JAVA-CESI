@@ -1,19 +1,57 @@
 <div class="container">
   <div class="card card-container">
-    <img id="profile-img" class="profile-img-card" src="/assets/Images/student.png"/>
+    <img class="image" src="/assets/Images/alternancehdCalque.png" width="220" height="80">
     <p id="profile-name" class="profile-name-card"></p>
+    <p class="profile-name-card">Inscrivez vos compétences dans chaque catégories</p><br>
     <form class="form-signin">
-      <input type="text" id="inputLastName" class="form-control" placeholder="Nom" [(ngModel)]="form.last_name" name="last_name" required autofocus>
-      <input type="text" id="inputFisrtName" class="form-control" placeholder="Prénom" [(ngModel)]="form.first_name" name="fisrt_name" required>
-      <input type="email" id="inputMail" class="form-control" placeholder="Adresse mail" [(ngModel)]="form.mail" name="mail" required>
-      <input type="text" id="inputPhone" class="form-control" placeholder="Téléphone" [(ngModel)]="form.phone" name="phone" required>
-      <input type="text" id="inputAddress" class="form-control" placeholder="Adresse" [(ngModel)]="form.address" name="address" required>
-      <input type="text" id="inputZip" class="form-control" placeholder="Code postal" [(ngModel)]="form.zip" name="zip" required>
-      <input type="text" id="inputCountry" class="form-control" placeholder="Ville" [(ngModel)]="form.country" name="country" required>
-      <input type="text" id="inputAge" class="form-control" placeholder="Age" [(ngModel)]="form.age" name="age" required>
-      <input type="file" id="inputCv" class="form-control" placeholder="Insérer votre C.V." [(ngModel)]="form.cv" name="cv" required><br>
+      <div class="row">
+        <div class="alert alert-secondary col-8" role="alert"><strong>C#</strong></div>
+        <div class="col-4 rating rating2"><!--
+          --><a href="#5" title="Give 5 stars">★</a><!--
+          --><a href="#4" title="Give 4 stars">★</a><!--
+          --><a href="#3" title="Give 3 stars">★</a><!--
+          --><a href="#2" title="Give 2 stars">★</a><!--
+          --><a href="#1" title="Give 1 star">★</a>
+        </div>
+        <div class="w-100"></div>
+        <div class="alert alert-secondary col-8" role="alert"><strong>JAVA</strong></div>
+        <div class="col-4 rating rating2"><!--
+          --><a href="#5" title="Give 5 stars">★</a><!--
+          --><a href="#4" title="Give 4 stars">★</a><!--
+          --><a href="#3" title="Give 3 stars">★</a><!--
+          --><a href="#2" title="Give 2 stars">★</a><!--
+          --><a href="#1" title="Give 1 star">★</a>
+        </div>
+        <div class="w-100"></div>
+        <div class="alert alert-secondary col-8" role="alert"><strong>PHP</strong></div>
+        <div class="col-4 rating rating2"><!--
+          --><a href="#5" title="Give 5 stars">★</a><!--
+          --><a href="#4" title="Give 4 stars">★</a><!--
+          --><a href="#3" title="Give 3 stars">★</a><!--
+          --><a href="#2" title="Give 2 stars">★</a><!--
+          --><a href="#1" title="Give 1 star">★</a>
+        </div>
+        <div class="w-100"></div>
+        <div class="alert alert-secondary col-8" role="alert"><strong>Architecture application</strong></div>
+        <div class="col-4 rating rating2"><!--
+          --><a href="#5" title="Give 5 stars">★</a><!--
+          --><a href="#4" title="Give 4 stars">★</a><!--
+          --><a href="#3" title="Give 3 stars">★</a><!--
+          --><a href="#2" title="Give 2 stars">★</a><!--
+          --><a href="#1" title="Give 1 star">★</a>
+        </div>
+        <div class="w-100"></div>
+        <div class="alert alert-secondary col-8" role="alert"><strong>Architecture système</strong></div>
+        <div class="col-4 rating rating2"><!--
+          --><a href="#5" title="Give 5 stars">★</a><!--
+          --><a href="#4" title="Give 4 stars">★</a><!--
+          --><a href="#3" title="Give 3 stars">★</a><!--
+          --><a href="#2" title="Give 2 stars">★</a><!--
+          --><a href="#1" title="Give 1 star">★</a>
+        </div>
+      </div><br>
 
-      <button class="btn btn-lg btn-success btn-block btn-signin" (click)="sendForm()" type="submit">Envoie du formulaire</button>
+      <button class="btn btn-lg btn-success btn-block btn-signin" (click)="sendForm()" type="submit">Valider et envoyer</button>
     </form>
   </div>
 </div>
