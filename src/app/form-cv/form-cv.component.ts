@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Form} from '../form';
 import {$} from 'protractor';
 
 @Component({
@@ -8,18 +7,6 @@ import {$} from 'protractor';
   styleUrls: ['./form-cv.component.css']
 })
 export class FormCvComponent implements OnInit {
-
-  form: Form = {
-    last_name: '',
-    first_name: '',
-    address: '',
-    age: '',
-    country: '',
-    mail: '',
-    phone: '',
-    zip: '',
-    cv: ''
-  };
 
   constructor() { }
 

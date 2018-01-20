@@ -33,7 +33,7 @@
     <div class="main">
       <!--Main content-->
       <ul>
-        <li *ngFor="let student of (students | filterArray:query | filterArrayComp:competenceFilter)">
+        <li *ngFor="let student of (students | filterArray:query | filterArrayComp:competenceFilter | orderby:orderProp)">
           <span>{{student.Name}}</span>
           <p>{{student.First_name}}</p>
           <p>{{student.number_phone}}</p>
