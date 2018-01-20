@@ -1,0 +1,29 @@
+[
+  {
+    "id": "01",
+    "Name": "Paul",
+    "First_name": "Pierre",
+    "number_phone": "06.65.42.26.12",
+    "competence": "C#",
+    "star": 3,
+    "img": "/assets/Images/student.png"
+  },
+  {
+    "id": "02",
+    "Name": "Clotilde",
+    "First_name": "Pierre",
+    "number_phone": "06.75.85.25.22",
+    "competence": "Java",
+    "star": 2,
+    "img": "/assets/Images/student.png"
+  },
+  {
+    "id": "03",
+    "Name": "Nicolas",
+    "First_name": "Pierre",
+    "number_phone": "06.66.23.49.91",
+    "competence": "Java",
+    "star": 1,
+    "img": "/assets/Images/student.png"
+  }
+]

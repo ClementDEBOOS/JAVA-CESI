@@ -16,7 +16,11 @@ import { PasswordForgetComponent } from './password-forget/password-forget.compo
 import { HomeComponent } from './home/home.component';
 import { LoginCesiComponent } from './login-cesi/login-cesi.component';
 import { ListStudentComponent } from './list-student/list-student.component';
-import {FilterArrayPipe} from './pipes/filter-array-pipe';
+import { FilterArrayPipe } from './pipes/filter-array-pipe';
+import { OrderByPipe } from './pipes/orderby-pipe';
+import { FilterArrayCompPipe } from './pipes/filter-array-comp-pipe';
+import {HttpClientModule} from '@angular/common/http';
+import {StudentsService} from './services/students.service';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -47,17 +51,22 @@ const appRoutes: Routes = [
     HomeComponent,
     LoginCesiComponent,
     ListStudentComponent,
-    FilterArrayPipe
+    FilterArrayPipe,
+    OrderByPipe,
+    FilterArrayCompPipe
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
     FormsModule
   ],
-  providers: [],
+  providers: [
+    StudentsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

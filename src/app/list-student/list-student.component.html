@@ -1,3 +1,6 @@
+<div class="alert" *ngIf="errorMessage">
+  <strong>Oh snap!</strong> {{errorMessage}}.
+</div>
 <div class="container">
   <div class="row">
     <div class="sidebar">
@@ -5,18 +8,37 @@
       <div>
         Search: <input [(ngModel)]="query">
       </div>
-      <div>Current query: {{query}}</div>
-      <div>Total number of student: {{students.length}}</div>
+      <div>Recherche: {{query}}</div>
+      <div>
+        Sort by:
+        <select [(ngModel)]="orderProp">
+          <option value="Name">Alphabetical</option>
+          <option value="star">Star content</option>
+        </select>
+      </div>
+      <div>
+        Sort by:
+        <select [(ngModel)]="competenceFilter">
+          <option> </option>
+          <option>C#</option>
+          <option>Java</option>
+          <option>PHP</option>
+          <option>Architecture application</option>
+          <option>Architecture systeme</option>
+        </select>
+      </div>
+      <div>Total d'étudiant: {{students.length}}</div>
     </div>
+
     <div class="main">
       <!--Main content-->
       <ul>
-        <li *ngFor="let student of (students | filterArray:query)">
+        <li *ngFor="let student of (students | filterArray:query | filterArrayComp:competenceFilter)">
           <span>{{student.Name}}</span>
           <p>{{student.First_name}}</p>
           <p>{{student.number_phone}}</p>
           <p>{{student.competence}}</p>
-          <p>{{student.picture}}</p>
+          <p>{{student.img}}</p>
         </li>
       </ul>
     </div>

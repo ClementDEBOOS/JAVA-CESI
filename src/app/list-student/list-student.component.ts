@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from '../student';
+import { StudentsService } from '../services/students.service';
 
 @Component({
   selector: 'app-list-student',
@@ -7,33 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListStudentComponent implements OnInit {
 
-  students = [
-    {
-      'Name': 'Paul',
-      'First_name': 'Pierre',
-      'number_phone': '06.65.42.26.12',
-      'competence': 'c# => 3 étoiles',
-      'picture': '/assets/Images/student.png'
-    },
-    {
-      'Name': 'Clotilde',
-      'First_name': 'Pierre',
-      'number_phone': '06.75.85.25.22',
-      'comptence': 'Java => 3 étoiles',
-      'picture': '/assets/Images/student.png'
-    },
-    {
-      'Name': 'Nicolas',
-      'First_name': 'Pierre',
-      'number_phone': '06.66.23.49.91',
-      'competence': 'PHP => 3 étoiles',
-      'picture': '/assets/Images/student.png'
-    },
-  ];
+  errorMessage: string;
 
-  constructor() { }
+  orderProp: string = 'star';
+
+  students = [];
+
+
+  constructor(private studentsService: StudentsService) { }
 
   ngOnInit() {
+      this.getStudents();
   }
 
+  getStudents(): void {
+    this.studentsService.getStudents()
+      .subscribe(students => {
+        this.students = students;
+        if (students.length === 0) {
+          this.errorMessage = 'Empty list of students';
+        }else {
+          this.errorMessage = '';
+        }
+      });
+  }
 }
