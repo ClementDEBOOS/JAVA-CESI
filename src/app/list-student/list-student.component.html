@@ -2,24 +2,24 @@
   <strong>Oh snap!</strong> {{errorMessage}}.
 </div>
 <div class="container">
+  <div class="alert alert-success" role="alert"><h1>Filtre</h1>
+<div class="container">
+
   <div class="row">
-    <div class="sidebar">
-      <!--Sidebar content-->
-      <div>
-        Search: <input [(ngModel)]="query">
-      </div>
-      <div>Recherche: {{query}}</div>
-      <div>
-        Sort by:
+
+      <div class="col-sm alert alert-info" role="alert"><input  placeholder="Recherche" [(ngModel)]="query"></div>
+
+      <div class="col-sm alert alert-info" role="alert">Recherche: {{query}}</div>
+
+      <div class="col-sm alert alert-info" role="alert">
         <select [(ngModel)]="orderProp">
           <option value="Name">Alphabetical</option>
           <option value="star">Star content</option>
         </select>
       </div>
-      <div>
-        Sort by:
+
+      <div class="col-sm alert alert-info" role="alert">
         <select [(ngModel)]="competenceFilter">
-          <option> </option>
           <option>C#</option>
           <option>Java</option>
           <option>PHP</option>
@@ -27,20 +27,28 @@
           <option>Architecture systeme</option>
         </select>
       </div>
-      <div>Total d'étudiant: {{students.length}}</div>
-    </div>
 
-    <div class="main">
-      <!--Main content-->
-      <ul>
-        <li *ngFor="let student of (students | filterArray:query | filterArrayComp:competenceFilter | orderby:orderProp)">
-          <span>{{student.Name}}</span>
-          <p>{{student.First_name}}</p>
-          <p>{{student.number_phone}}</p>
-          <p>{{student.competence}}</p>
-          <p>{{student.img}}</p>
-        </li>
-      </ul>
-    </div>
+      <div class="col-sm alert alert-info" role="alert">Total d'étudiant: {{students.length}}</div>
+  </div>
   </div>
 </div>
+
+    <div class="container">
+      <!--Main content-->
+      <div class="card" *ngFor="let student of (students | filterArray:query | filterArrayComp:competenceFilter | orderby:orderProp)">
+        <div class="row">
+          <a href="#/students/{{student.id}}" class="col-sm-2 thumb">
+            <img class="img-thumbnail profile-img-card" [src]="student.img" alt="Student image"/>
+          </a>
+          <div class="col-sm-8 card-block">
+            <a href="#/students/{{student.id}}"><h4 class="card-title">{{student.Name}}
+            </h4></a>
+            <p class="card-text">{{student.competence}} <strong><span class="tag tag-default">{{student.star}} Etoile !</span></strong></p>
+            <a href="#/beers/{{student.id}}" class="btn btn-primary">Detail</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</div>
+
