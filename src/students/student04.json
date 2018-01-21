@@ -1,0 +1,11 @@
+{
+  "id": "student04",
+  "name": "Dylan",
+  "first_name": "Metton",
+  "number_phone": "06.55.88.75.21",
+  "competence": "PHP",
+  "star": 5,
+  "img": "/assets/Images/student.png",
+  "mail": "dylan.metton@gmail.com",
+  "pwd": "azerty"
+}

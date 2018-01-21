@@ -1,0 +1,11 @@
+{
+  "id": "student03",
+  "name": "Nicolas",
+  "first_name": "Pierre",
+  "number_phone": "06.66.23.49.91",
+  "competence": "Java",
+  "star": 1,
+  "img": "/assets/Images/student.png",
+  "mail": "nicolas.pierre@gmail.com",
+  "pwd": "azerty"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "student01",
+  "name": "Paul",
+  "first_name": "Pierre",
+  "number_phone": "06.65.42.26.12",
+  "competence": "C#",
+  "star": 3,
+  "img": "/assets/Images/student.png",
+  "mail": "paul.pierre@gmail.com",
+  "pwd": "azerty"
+}

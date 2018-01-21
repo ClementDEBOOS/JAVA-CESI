@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Login} from '../login';
 import {Register} from '../register';
 
 @Component({
@@ -14,7 +13,7 @@ export class RegisterComponent implements OnInit {
     pwd: '',
     phone: '',
     name: ''
-  }
+  };
 
   constructor() { }
 

@@ -1,29 +1,46 @@
 [
   {
-    "id": "01",
-    "Name": "Paul",
-    "First_name": "Pierre",
+    "id": "student01",
+    "name": "Paul",
+    "first_name": "Pierre",
     "number_phone": "06.65.42.26.12",
     "competence": "C#",
     "star": 3,
-    "img": "/assets/Images/student.png"
+    "img": "/assets/Images/student.png",
+    "mail": "paul.pierre@gmail.com",
+    "pwd": "azerty"
   },
   {
-    "id": "02",
-    "Name": "Clotilde",
-    "First_name": "Pierre",
+    "id": "student02",
+    "name": "Clotilde",
+    "first_name": "Pierre",
     "number_phone": "06.75.85.25.22",
     "competence": "Java",
     "star": 2,
-    "img": "/assets/Images/student.png"
+    "img": "/assets/Images/student.png",
+    "mail": "clotilde.pierre@gmail.com",
+    "pwd": "azerty"
   },
   {
-    "id": "03",
-    "Name": "Nicolas",
-    "First_name": "Pierre",
+    "id": "student03",
+    "name": "Nicolas",
+    "first_name": "Pierre",
     "number_phone": "06.66.23.49.91",
     "competence": "Java",
     "star": 1,
-    "img": "/assets/Images/student.png"
+    "img": "/assets/Images/student.png",
+    "mail": "nicolas.pierre@gmail.com",
+    "pwd": "azerty"
+  },
+  {
+    "id": "student04",
+    "name": "Dylan",
+    "first_name": "Metton",
+    "number_phone": "06.55.88.75.21",
+    "competence": "PHP",
+    "star": 5,
+    "img": "/assets/Images/student.png",
+    "mail": "dylan.metton@gmail.com",
+    "pwd": "azerty"
   }
 ]

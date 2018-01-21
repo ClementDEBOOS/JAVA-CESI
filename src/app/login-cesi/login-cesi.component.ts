@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Login} from '../login';
 import {formArrayNameProvider} from '@angular/forms/src/directives/reactive_directives/form_group_name';
 import {Router} from '@angular/router';
+import {StudentsService} from '../services/students.service';
+import {Teacher} from '../teacher';
 
 @Component({
   selector: 'app-login-cesi',
@@ -10,26 +11,46 @@ import {Router} from '@angular/router';
 })
 export class LoginCesiComponent implements OnInit {
 
-  login: Login = {
-    mail: '',
+  teachers: Teacher = {
+    id: '',
+    name: '',
     pwd: ''
   };
+
   error: any = null;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private studentsService: StudentsService) { }
 
   ngOnInit() {
   }
   sendLogin() {
-    console.log(this.login.mail, this.login.pwd);
+    console.log(this.teachers.name, this.teachers.pwd);
+
+    this.studentsService.getTeacher().subscribe((credentials) => {
+      if (credentials.filter( cred => (cred.name === this.teachers.name) && (cred.pwd === this.teachers.pwd)).length > 0) {
+        // User valid
+        this.router.navigate(['/listStudent']);
+        console.log('Valid user');
+      } else {
+        this.error = {
+          title: 'Identifiant ou mot de passe incorrecte',
+          text: 'Recommencer'
+        };
+        console.log('Not valid user');
+      }
+    });
+
+
+    /*
     // Fonction onchange regex
-    if (this.login.mail === 'admin' && this.login.pwd === 'admin') {
-      this.router.navigate(['/listStudent']);
+    if (this.user.mail === 'clement' && this.user.pwd === 'azerty') {
+      this.router.navigate(['/home']);
     }else {
       this.error = {
-        title: 'Mauvais identifiant',
+        title: 'Identifiant ou mot de passe incorrecte',
         text: 'Recommencer'
       };
     }
+    */
   }
 }

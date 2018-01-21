@@ -13,13 +13,14 @@
 
       <div class="col-sm alert alert-info" role="alert">
         <select [(ngModel)]="orderProp">
-          <option value="Name">Alphabetical</option>
+          <option value="name">Alphabetical</option>
           <option value="star">Star content</option>
         </select>
       </div>
 
       <div class="col-sm alert alert-info" role="alert">
         <select [(ngModel)]="competenceFilter">
+          <option> </option>
           <option>C#</option>
           <option>Java</option>
           <option>PHP</option>
@@ -41,10 +42,11 @@
             <img class="img-thumbnail profile-img-card" [src]="student.img" alt="Student image"/>
           </a>
           <div class="col-sm-8 card-block">
-            <a href="#/students/{{student.id}}"><h4 class="card-title">{{student.Name}}
-            </h4></a>
+            <h4 class="card-title">{{student.name}}
+            </h4>
             <p class="card-text">{{student.competence}} <strong><span class="tag tag-default">{{student.star}} Etoile !</span></strong></p>
-            <a href="#/beers/{{student.id}}" class="btn btn-primary">Detail</a>
+            <!--<a href="#/students/{{student.id}}" class="btn btn-primary">Detail</a>-->
+            <button class="btn btn-primary" (click)="sendDetails(student)" type="submit">Détails</button>
           </div>
 
         </div>

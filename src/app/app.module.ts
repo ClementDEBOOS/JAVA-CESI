@@ -21,6 +21,7 @@ import { OrderByPipe } from './pipes/orderby-pipe';
 import { FilterArrayCompPipe } from './pipes/filter-array-comp-pipe';
 import {HttpClientModule} from '@angular/common/http';
 import {StudentsService} from './services/students.service';
+import { StudentDetailComponent } from './student-detail/student-detail.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'loginCesi', component: LoginCesiComponent },
   { path: 'listStudent', component: ListStudentComponent },
+  { path: 'studentDetail/:id', component: StudentDetailComponent },
 
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
@@ -53,7 +55,8 @@ const appRoutes: Routes = [
     ListStudentComponent,
     FilterArrayPipe,
     OrderByPipe,
-    FilterArrayCompPipe
+    FilterArrayCompPipe,
+    StudentDetailComponent
   ],
   imports: [
     BrowserModule,

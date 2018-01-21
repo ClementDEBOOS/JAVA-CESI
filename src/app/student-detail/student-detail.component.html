@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>{{student.name}} {{student.first_name}}</h1>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <img [src]="student.img" class="img-thumbnail profile-img-card">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item"><dl><dt>Nom :</dt><dd>{{student.name}}</dd></dl></li>
+    <li class="list-group-item"><dl><dt>Prénom :</dt><dd>{{student.first_name}}</dd></dl></li>
+    <li class="list-group-item"><dl><dt>Numéro de téléphone :</dt><dd>{{student.number_phone}}</dd></dl></li>
+    <li class="list-group-item"><dl><dt>Adresse mail :</dt><dd>{{student.mail}}</dd></dl></li>
+    <li class="list-group-item"><dl><dt>Compétence :</dt><dd>{{student.competence}}</dd></dl></li>
+    <li class="list-group-item"><dl><dt>Niveau :</dt><dd>{{student.star}}</dd></dl></li>
+  </ul>
+  <br><button class="btn btn-primary" (click)="goBack()">Go Back</button>
+</div>
+
