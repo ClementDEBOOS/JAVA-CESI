@@ -3,8 +3,11 @@
   "name": "Nicolas",
   "first_name": "Pierre",
   "number_phone": "06.66.23.49.91",
-  "competence": "Java",
-  "star": 1,
+  "CSharp": 5,
+  "Java": 4,
+  "PHP": 3,
+  "Architecture_application": 1,
+  "architecture_system": 2,
   "img": "/assets/Images/student.png",
   "mail": "nicolas.pierre@gmail.com",
   "pwd": "azerty"

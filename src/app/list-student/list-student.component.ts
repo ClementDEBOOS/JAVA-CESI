@@ -16,18 +16,6 @@ export class ListStudentComponent implements OnInit {
 
   students = [];
 
-  student: Student = {
-    name: '',
-    competence: '',
-    first_name: '',
-    id: '',
-    img: '',
-    number_phone: '',
-    pwd: '',
-    star: 0,
-    mail: ''
-  };
-
   constructor(private router: Router, private studentsService: StudentsService) { }
 
   ngOnInit() {

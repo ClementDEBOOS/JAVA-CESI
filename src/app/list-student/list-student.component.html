@@ -44,7 +44,11 @@
           <div class="col-sm-8 card-block">
             <h4 class="card-title">{{student.name}}
             </h4>
-            <p class="card-text">{{student.competence}} <strong><span class="tag tag-default">{{student.star}} Etoile !</span></strong></p>
+            <p class="card-text">C# : <strong><span class="tag tag-default">{{student.CSharp}} Etoile !</span></strong></p>
+            <p class="card-text">Java : <strong><span class="tag tag-default">{{student.Java}} Etoile !</span></strong></p>
+            <p class="card-text">PHP : <strong><span class="tag tag-default">{{student.PHP}} Etoile !</span></strong></p>
+            <p class="card-text">Architecture application : <strong><span class="tag tag-default">{{student.Architecture_application}} Etoile !</span></strong></p>
+            <p class="card-text">Architecture système : <strong><span class="tag tag-default">{{student.architecture_system}} Etoile !</span></strong></p>
             <!--<a href="#/students/{{student.id}}" class="btn btn-primary">Detail</a>-->
             <button class="btn btn-primary" (click)="sendDetails(student)" type="submit">Détails</button>
           </div>

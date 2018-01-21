@@ -3,8 +3,11 @@ export class Student {
   name: string;
   first_name: string;
   number_phone: string;
-  competence: string;
-  star: number;
+  CSharp: number;
+  Java: number;
+  PHP: number;
+  Architecture_application: number;
+  architecture_system: number;
   img: string;
   mail: string;
   pwd: string;

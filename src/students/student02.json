@@ -3,8 +3,11 @@
   "name": "Clotilde",
   "first_name": "Pierre",
   "number_phone": "06.75.85.25.22",
-  "competence": "Java",
-  "star": 2,
+  "CSharp": 3,
+  "Java": 3,
+  "PHP": 2,
+  "Architecture_application": 4,
+  "architecture_system": 5,
   "img": "/assets/Images/student.png",
   "mail": "clotilde.pierre@gmail.com",
   "pwd": "azerty"

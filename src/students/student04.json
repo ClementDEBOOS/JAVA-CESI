@@ -3,8 +3,11 @@
   "name": "Dylan",
   "first_name": "Metton",
   "number_phone": "06.55.88.75.21",
-  "competence": "PHP",
-  "star": 5,
+  "CSharp": 2,
+  "Java": 3,
+  "PHP": 5,
+  "Architecture_application": 5,
+  "architecture_system": 5,
   "img": "/assets/Images/student.png",
   "mail": "dylan.metton@gmail.com",
   "pwd": "azerty"

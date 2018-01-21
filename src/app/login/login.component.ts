@@ -13,13 +13,16 @@ export class LoginComponent implements OnInit {
 
   students: Student = {
     name: '',
-    competence: '',
     first_name: '',
     id: '',
     img: '',
     number_phone: '',
     pwd: '',
-    star: 0,
+    CSharp: 0,
+    Java: 0,
+    PHP: 0,
+    Architecture_application: 0,
+    architecture_system: 0,
     mail: ''
   };
 
