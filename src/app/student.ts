@@ -7,7 +7,7 @@ export class Student {
   Java: number;
   PHP: number;
   Architecture_application: number;
-  architecture_system: number;
+  Architecture_system: number;
   img: string;
   mail: string;
   pwd: string;

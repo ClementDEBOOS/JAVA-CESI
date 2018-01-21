@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     Java: 0,
     PHP: 0,
     Architecture_application: 0,
-    architecture_system: 0,
+    Architecture_system: 0,
     mail: ''
   };
 

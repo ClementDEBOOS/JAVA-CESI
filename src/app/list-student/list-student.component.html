@@ -11,12 +11,12 @@
 
       <div class="col-sm alert alert-info" role="alert">Recherche: {{query}}</div>
 
-      <div class="col-sm alert alert-info" role="alert">
+     <!-- <div class="col-sm alert alert-info" role="alert">
         <select [(ngModel)]="orderProp">
           <option value="name">Alphabetical</option>
           <option value="star">Star content</option>
         </select>
-      </div>
+      </div>-->
 
       <div class="col-sm alert alert-info" role="alert">
         <select [(ngModel)]="competenceFilter">
@@ -36,7 +36,7 @@
 
     <div class="container">
       <!--Main content-->
-      <div class="card" *ngFor="let student of (students | filterArray:query | filterArrayComp:competenceFilter | orderby:orderProp)">
+      <div class="card" *ngFor="let student of (students | filterArray:query | filterArrayComp:competenceFilter)">
         <div class="row">
           <a href="#/students/{{student.id}}" class="col-sm-2 thumb">
             <img class="img-thumbnail profile-img-card" [src]="student.img" alt="Student image"/>
@@ -48,11 +48,10 @@
             <p class="card-text">Java : <strong><span class="tag tag-default">{{student.Java}} Etoile !</span></strong></p>
             <p class="card-text">PHP : <strong><span class="tag tag-default">{{student.PHP}} Etoile !</span></strong></p>
             <p class="card-text">Architecture application : <strong><span class="tag tag-default">{{student.Architecture_application}} Etoile !</span></strong></p>
-            <p class="card-text">Architecture système : <strong><span class="tag tag-default">{{student.architecture_system}} Etoile !</span></strong></p>
+            <p class="card-text">Architecture système : <strong><span class="tag tag-default">{{student.Architecture_system}} Etoile !</span></strong></p>
             <!--<a href="#/students/{{student.id}}" class="btn btn-primary">Detail</a>-->
             <button class="btn btn-primary" (click)="sendDetails(student)" type="submit">Détails</button>
           </div>
-
         </div>
       </div>
     </div>
