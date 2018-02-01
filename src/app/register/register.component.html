@@ -11,11 +11,12 @@
       <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" [(ngModel)]="register.pwd" name="pwd" required>
       <input type="tel" id="inputPhone" class="form-control" placeholder="Numéro de téléphone" [(ngModel)]="register.phone" name="phone" required><br>
       <div id="remember" class="checkbox">
-        <label>
-          <input type="checkbox" value="remember-me"> Se souvenir de moi
-        </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="sendRegister()" type="submit">S'enregistrer</button>
     </form><!-- /form -->
+    <br>
+    <a routerLink="/login" class="login text-center">
+      Déjà un compte?
+    </a>
   </div><!-- /card-container -->
 </div><!-- /container -->
