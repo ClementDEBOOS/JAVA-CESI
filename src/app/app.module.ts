@@ -23,6 +23,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {StudentsService} from './services/students.service';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { StarRatingModule } from 'angular-star-rating';
+import { ValidFormComponent } from './valid-form/valid-form.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
   { path: 'loginCesi', component: LoginCesiComponent },
   { path: 'listStudent', component: ListStudentComponent },
   { path: 'studentDetail/:id', component: StudentDetailComponent },
+  { path: 'valid', component: ValidFormComponent },
 
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
@@ -57,7 +59,8 @@ const appRoutes: Routes = [
     FilterArrayPipe,
     OrderByPipe,
     FilterArrayCompPipe,
-    StudentDetailComponent
+    StudentDetailComponent,
+    ValidFormComponent
   ],
   imports: [
     BrowserModule,

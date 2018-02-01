@@ -4,6 +4,7 @@ import {
   OnHoverRatingChangeEvent,
   OnRatingChangeEven
 } from 'angular-star-rating';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-form-cv',
@@ -12,7 +13,7 @@ import {
 })
 export class FormCvComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -44,6 +45,6 @@ export class FormCvComponent implements OnInit {
 
 
   sendForm() {
-
+    this.router.navigate(['/valid']);
   }
 }
