@@ -12,35 +12,43 @@
       <button class="btn btn-primary" (click)="goBack()">Go Back</button>
     </div>
 
-    <div class="row card container">
-      <div class="col-sm-8 card-block justify-content-between">
-        <p class="card-text col-8">Nom : <strong><span class="tag tag-default col-8">{{student.name}}</span></strong></p>
-        <p class="card-text col">Prénom : <strong><span class="tag tag-default col-md-auto">{{student.first_name}}</span></strong></p>
-        <p class="card-text col">Numéro de téléphone : <strong><span class="tag tag-default col-md-auto">{{student.number_phone}}</span></strong></p>
-        <p class="card-text col">Adresse mail : <strong><span class="tag tag-default col-md-auto">{{student.mail}}</span></strong></p>
-        <p class="card-text col">C# : <strong><span class="tag tag-default col-md-auto">{{student.CSharp}} Etoile !</span></strong></p>
-        <p class="card-text col">Java : <strong><span class="tag tag-default col-md-auto">{{student.Java}} Etoile !</span></strong></p>
-        <p class="card-text col">PHP : <strong><span class="tag tag-default col-md-auto">{{student.PHP}} Etoile !</span></strong></p>
-        <p class="card-text col">Architecture application : <strong><span class="tag tag-default col-md-auto">{{student.Architecture_application}} Etoile !</span></strong></p>
-        <p class="card-text col">Architecture système : <strong><span class="tag tag-default col-md-auto">{{student.Architecture_system}} Etoile !</span></strong></p>
+    <div class="card container">
+      <div class="row">
+        <div class="col-5">Nom : </div>
+        <div class="col"><strong><span class="tag tag-default col-md-auto">{{student.name}}</span></strong></div>
+      </div><br>
+      <div class="row">
+        <div class="col-5">Prénom : </div>
+        <div class="col"><strong><span class="tag tag-default col-md-auto">{{student.first_name}}</span></strong></div>
+      </div><br>
+      <div class="row">
+        <div class="col-5">Numéro de téléphone : </div>
+        <div class="col"><strong><span class="tag tag-default col-md-auto">{{student.number_phone}}</span></strong></div>
+      </div><br>
+      <div class="row">
+        <div class="col-5">Adresse mail : </div>
+        <div class="col"><strong><span class="tag tag-default col-md-auto">{{student.mail}}</span></strong></div>
+      </div><br>
+      <div class="row">
+        <div class="col-4">C# : </div>
+        <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.CSharp" [starType]="'svg'"></star-rating-comp></div>
+      </div><br>
+      <div class="row">
+        <div class="col-4">Java : </div>
+        <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.Java" [starType]="'svg'"></star-rating-comp></div>
+      </div><br>
+      <div class="row">
+        <div class="col-4">PHP : </div>
+        <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.PHP" [starType]="'svg'"></star-rating-comp></div>
+      </div><br>
+      <div class="row">
+        <div class="col-4">Architecture application : </div>
+        <div class="col-4"><star-rating-comp [readOnly]="true"[rating]="student.Architecture_application" [starType]="'svg'"></star-rating-comp></div>
+      </div><br>
+      <div class="row">
+        <div class="col-4">Architecture système : </div>
+        <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.Architecture_system" [starType]="'svg'"></star-rating-comp></div>
       </div>
-      <!--<div class="col-6 col-sm-4 " >Nom :</div><div class="col-6 col-sm-4 ">{{student.name}}</div>
-      <div class="w-100 d-none d-md-block"></div>
-      <div class="col-6 col-sm-4">Prénom :</div><div class="col-6 col-sm-4">{{student.first_name}}</div>
-      <div class="w-100 d-none d-md-block"></div>
-      <div class="col-6 col-sm-4 ">Numéro de téléphone :</div><div class="col-6 col-sm-4">{{student.number_phone}}</div>
-      <div class="w-100 d-none d-md-block"></div>
-      <div class="col-6 col-sm-4">Adresse mail :</div><div class="col-6 col-sm-4">{{student.mail}}</div>
-      <div class="w-100 d-none d-md-block"></div>
-      <div class="col-6 col-sm-4">C# :</div><div class="col-6 col-sm-4">{{student.CSharp}} Etoile !</div>
-      <div class="w-100 d-none d-md-block"></div>
-      <div class="col-6 col-sm-4">Java :</div><div class="col-6 col-sm-4">{{student.Java}} Etoile !</div>
-      <div class="w-100 d-none d-md-block"></div>
-      <div class="col-6 col-sm-4">PHP :</div><div class="col-6 col-sm-4">{{student.PHP}} Etoile !</div>
-      <div class="w-100 d-none d-md-block"></div>
-      <div class="col-6 col-sm-4">Architecture application :</div><div class="col-6 col-sm-4">{{student.Architecture_application}} Etoile !</div>
-      <div class="w-100 d-none d-md-block"></div>
-      <div class="col-6 col-sm-4">Architecture système :</div><div class="col-6 col-sm-4">{{student.Architecture_system}} Etoile !</div>-->
     </div>
   </div>
 </div>

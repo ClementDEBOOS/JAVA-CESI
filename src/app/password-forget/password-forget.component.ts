@@ -17,4 +17,8 @@ export class PasswordForgetComponent implements OnInit {
   ngOnInit() {
   }
 
+  sendPasswordForget() {
+
+  }
+
 }

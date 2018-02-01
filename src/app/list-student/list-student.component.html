@@ -34,6 +34,7 @@
   </div>
 </div>
 
+
     <div class="container">
       <!--Main content-->
       <div class="card" *ngFor="let student of (students | filterArray:query | filterArrayComp:competenceFilter)">
@@ -44,12 +45,26 @@
           <div class="col-sm-8 card-block">
             <h4 class="card-title">{{student.name}}
             </h4>
-            <p class="card-text">C# : <strong><span class="tag tag-default">{{student.CSharp}} Etoile !</span></strong></p>
-            <p class="card-text">Java : <strong><span class="tag tag-default">{{student.Java}} Etoile !</span></strong></p>
-            <p class="card-text">PHP : <strong><span class="tag tag-default">{{student.PHP}} Etoile !</span></strong></p>
-            <p class="card-text">Architecture application : <strong><span class="tag tag-default">{{student.Architecture_application}} Etoile !</span></strong></p>
-            <p class="card-text">Architecture système : <strong><span class="tag tag-default">{{student.Architecture_system}} Etoile !</span></strong></p>
-            <!--<a href="#/students/{{student.id}}" class="btn btn-primary">Detail</a>-->
+            <div class="row">
+              <div class="col-4">C# : </div>
+              <div class="col-4"> <star-rating-comp [readOnly]="true" [rating]="student.CSharp" [starType]="'svg'"></star-rating-comp></div>
+            </div><br>
+            <div class="row">
+              <div class="col-4">Java : </div>
+              <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.Java" [starType]="'svg'"></star-rating-comp></div>
+            </div><br>
+            <div class="row">
+              <div class="col-4">PHP : </div>
+              <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.PHP" [starType]="'svg'"></star-rating-comp></div>
+            </div><br>
+            <div class="row">
+              <div class="col-4">Architecture application : </div>
+              <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.Architecture_application" [starType]="'svg'"></star-rating-comp></div>
+            </div><br>
+            <div class="row">
+              <div class="col-4">Architecture système : </div>
+              <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.Architecture_system" [starType]="'svg'"></star-rating-comp></div>
+            </div>
           </div>
           <div class="col align-self-center">
             <button class="btn btn-primary" (click)="sendDetails(student)" type="submit">Détails</button>

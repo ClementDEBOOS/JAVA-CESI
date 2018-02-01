@@ -7,7 +7,7 @@ export class FilterArrayCompPipe implements PipeTransform {
     if (!args || !args[0]) {
       return items;
     } else if (items) {
-      return items.filter(item => item.Java.match(new RegExp(args, 'i')));
+      return items.filter(item => item.competence.match(new RegExp(args, 'i')));
     }
   }
 }

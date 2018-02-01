@@ -22,6 +22,7 @@ import { FilterArrayCompPipe } from './pipes/filter-array-comp-pipe';
 import {HttpClientModule} from '@angular/common/http';
 import {StudentsService} from './services/students.service';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { StarRatingModule } from 'angular-star-rating';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -65,7 +66,8 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
-    FormsModule
+    FormsModule,
+    StarRatingModule.forRoot()
   ],
   providers: [
     StudentsService

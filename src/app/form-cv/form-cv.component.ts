@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import {$} from 'protractor';
+import {Component, OnInit} from '@angular/core';
+import {
+  OnClickEvent,
+  OnHoverRatingChangeEvent,
+  OnRatingChangeEven
+} from 'angular-star-rating';
 
 @Component({
   selector: 'app-form-cv',
@@ -12,6 +16,33 @@ export class FormCvComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  onClickResult: OnClickEvent;
+  onClickResultJAVA: OnClickEvent;
+  onHoverRatingChangeResult: OnHoverRatingChangeEvent;
+  onRatingChangeResult: OnRatingChangeEven;
+
+  onClick = ($event: OnClickEvent) => {
+    console.log('onClick $event: ', $event);
+    this.onClickResult = $event;
+  }
+
+  onClickJAVA = ($event: OnClickEvent) => {
+    console.log('onClick $event: ', $event);
+    this.onClickResultJAVA = $event;
+  }
+
+  onRatingChange = ($event: OnRatingChangeEven) => {
+    console.log('onRatingUpdated $event: ', $event);
+    this.onRatingChangeResult = $event;
+  }
+
+  onHoverRatingChange = ($event: OnHoverRatingChangeEvent) => {
+    console.log('onHoverRatingChange $event: ', $event);
+    this.onHoverRatingChangeResult = $event;
+  }
+
+
   sendForm() {
 
   }
