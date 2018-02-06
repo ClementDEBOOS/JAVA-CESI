@@ -12,7 +12,7 @@ export class ListStudentComponent implements OnInit {
 
   errorMessage: string;
 
-  orderProp: string = 'star';
+  orderProp: string;
 
   students = [];
 
@@ -36,5 +36,17 @@ export class ListStudentComponent implements OnInit {
 
   sendDetails(student) {
     this.router.navigate(['/studentDetail', student.id]);
+  }
+
+  getStudentSkills(student) {
+    return Object.keys(student.skills).sort((a, b) => {
+      if (student.skills[a] > student.skills[b]) {
+        return -1;
+      } else if (student.skills[b] > student.skills[a]) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }).slice(0, 5);
   }
 }

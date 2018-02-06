@@ -29,25 +29,11 @@
         <div class="col-5">Adresse mail : </div>
         <div class="col"><strong><span class="tag tag-default col-md-auto">{{student.mail}}</span></strong></div>
       </div><br>
-      <div class="row">
-        <div class="col-4">C# : </div>
-        <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.CSharp" [starType]="'svg'"></star-rating-comp></div>
-      </div><br>
-      <div class="row">
-        <div class="col-4">Java : </div>
-        <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.Java" [starType]="'svg'"></star-rating-comp></div>
-      </div><br>
-      <div class="row">
-        <div class="col-4">PHP : </div>
-        <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.PHP" [starType]="'svg'"></star-rating-comp></div>
-      </div><br>
-      <div class="row">
-        <div class="col-4">Architecture application : </div>
-        <div class="col-4"><star-rating-comp [readOnly]="true"[rating]="student.Architecture_application" [starType]="'svg'"></star-rating-comp></div>
-      </div><br>
-      <div class="row">
-        <div class="col-4">Architecture système : </div>
-        <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.Architecture_system" [starType]="'svg'"></star-rating-comp></div>
+      <div *ngFor="let skill of getStudentSkills(students)">
+        <div class="row">
+          <div class="col-4">{{ skill }}</div>
+          <div class="col-4"> <star-rating-comp [readOnly]="true" [rating]="students.skills[skill]" [starType]="'svg'"></star-rating-comp></div>
+        </div><br>
       </div>
     </div>
   </div>

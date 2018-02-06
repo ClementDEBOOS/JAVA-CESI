@@ -14,7 +14,7 @@ export class StudentDetailComponent implements OnInit {
   errorMessage: string;
 
 
-  student = {};
+  student = [];
 
   constructor(private route: ActivatedRoute, private studentsService: StudentsService, private location: Location) {
   }
@@ -29,7 +29,7 @@ export class StudentDetailComponent implements OnInit {
   getStudent(studentId: string): void {
     this.studentsService.getStudent(studentId)
       .subscribe(students => {
-        this.student = students;
+        this.students = students;
         if (students.length === 0) {
           this.errorMessage = 'Empty list of student';
         } else {

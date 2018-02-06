@@ -43,27 +43,13 @@
             <img class="img-thumbnail profile-img-card" [src]="student.img" alt="Student image"/>
           </a>
           <div class="col-sm-8 card-block">
-            <h4 class="card-title">{{student.name}}
-            </h4>
-            <div class="row">
-              <div class="col-4">C# : </div>
-              <div class="col-4"> <star-rating-comp [readOnly]="true" [rating]="student.CSharp" [starType]="'svg'"></star-rating-comp></div>
-            </div><br>
-            <div class="row">
-              <div class="col-4">Java : </div>
-              <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.Java" [starType]="'svg'"></star-rating-comp></div>
-            </div><br>
-            <div class="row">
-              <div class="col-4">PHP : </div>
-              <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.PHP" [starType]="'svg'"></star-rating-comp></div>
-            </div><br>
-            <div class="row">
-              <div class="col-4">Architecture application : </div>
-              <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.Architecture_application" [starType]="'svg'"></star-rating-comp></div>
-            </div><br>
-            <div class="row">
-              <div class="col-4">Architecture système : </div>
-              <div class="col-4"><star-rating-comp [readOnly]="true" [rating]="student.Architecture_system" [starType]="'svg'"></star-rating-comp></div>
+            <h4 class="card-title">{{student.name}}</h4>
+
+            <div *ngFor="let skill of getStudentSkills(student)">
+              <div class="row">
+                <div class="col-4">{{ skill }}</div>
+                <div class="col-4"> <star-rating-comp [readOnly]="true" [rating]="student.skills[skill]" [starType]="'svg'"></star-rating-comp></div>
+              </div><br>
             </div>
           </div>
           <div class="col align-self-center">

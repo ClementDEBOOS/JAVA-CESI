@@ -6,12 +6,10 @@ export class Student {
   img: string;
   mail: string;
   pwd: string;
-  competence: Competence;
+  skills: Object;
 }
-export class Competence {
-  CSharp: number;
-  Java: number;
-  PHP: number;
-  Architecture_application: number;
-  Architecture_system: number;
+
+export class Skill {
+  name: string;
+  level: number;
 }
