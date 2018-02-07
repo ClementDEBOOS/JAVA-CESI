@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10">
-      <h1>{{student.name}} {{student.first_name}}</h1>
+      <h1>{{students.name}} {{students.first_name}}</h1>
       <ul class="list-inline">
         <li class="list-inline-item">
-          <img [src]="student.img" class="img-thumbnail profile-img-card">
+          <img [src]="students.img" class="img-thumbnail profile-img-card">
         </li>
       </ul>
     </div>
@@ -15,19 +15,19 @@
     <div class="card container">
       <div class="row">
         <div class="col-5">Nom : </div>
-        <div class="col"><strong><span class="tag tag-default col-md-auto">{{student.name}}</span></strong></div>
+        <div class="col"><strong><span class="tag tag-default col-md-auto">{{students.name}}</span></strong></div>
       </div><br>
       <div class="row">
         <div class="col-5">Prénom : </div>
-        <div class="col"><strong><span class="tag tag-default col-md-auto">{{student.first_name}}</span></strong></div>
+        <div class="col"><strong><span class="tag tag-default col-md-auto">{{students.first_name}}</span></strong></div>
       </div><br>
       <div class="row">
         <div class="col-5">Numéro de téléphone : </div>
-        <div class="col"><strong><span class="tag tag-default col-md-auto">{{student.number_phone}}</span></strong></div>
+        <div class="col"><strong><span class="tag tag-default col-md-auto">{{students.number_phone}}</span></strong></div>
       </div><br>
       <div class="row">
         <div class="col-5">Adresse mail : </div>
-        <div class="col"><strong><span class="tag tag-default col-md-auto">{{student.mail}}</span></strong></div>
+        <div class="col"><strong><span class="tag tag-default col-md-auto">{{students.mail}}</span></strong></div>
       </div><br>
       <div *ngFor="let skill of getStudentSkills(students)">
         <div class="row">
@@ -36,6 +36,6 @@
         </div><br>
       </div>
     </div>
-  </div>
+  </div><br><br><br>
 </div>
 

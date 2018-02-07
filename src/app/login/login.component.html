@@ -7,26 +7,15 @@
     <div class="alert alert-danger" *ngIf="!!error" align="center"><strong>{{ error.title }}<br></strong>{{ error.text }}</div>
     <form class="form-signin">
       <span id="reauth-email" class="reauth-email"></span>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Nom" [(ngModel)]="students.name" name="mail" required autofocus>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" [(ngModel)]="students.pwd" name="pwd" required>
+      <input type="name" id="inputName" class="form-control" placeholder="Nom" [(ngModel)]="students.name" name="Name" required autofocus><br>
+      <input type="FirstName" id="inputFirstName" class="form-control" placeholder="Prénom" [(ngModel)]="students.first_name" name="first_name" required><br>
+      <input type="NumberPhone" id="inputNumberPhone" class="form-control" placeholder="Numéro de téléphone" [(ngModel)]="students.number_phone" name="number_phone" required><br>
+      <input type="Mail" id="inputMail" class="form-control" placeholder="Mail" [(ngModel)]="students.mail" name="mail" required><br>
       <div id="remember" class="checkbox">
-        <label>
-          <input type="checkbox" value="remember-me"> Se souvenir de moi
-        </label>
-      </div>
-      <button class="btn btn-lg btn-success btn-block btn-signin" (click)="sendLogin()" type="submit">Connexion</button>
+      </div><br>
+      <button class="btn btn-lg btn-success btn-block btn-signin" (click)="sendLogin()" type="submit">Etape suivante -></button>
     </form><!-- /form -->
-    <br>
-    <a routerLink="/pwdForget" class="forgot-password text-center small">
-      Mot de passe oublié?
-    </a><br>
-    <h5><label type="text" class="text-center">Pas encore de compte ? <a routerLink="/register">S'inscrire</a></label></h5>
-
 
   </div><!-- /card-container -->
-
 </div><!-- /container -->
 
-<div class="modal-footer">
-
-</div>

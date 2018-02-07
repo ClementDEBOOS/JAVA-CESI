@@ -11,14 +11,16 @@
 
       <div class="col-sm alert alert-info" role="alert">Recherche: {{query}}</div>
 
-     <!-- <div class="col-sm alert alert-info" role="alert">
-        <select [(ngModel)]="orderProp">
-          <option value="name">Alphabetical</option>
-          <option value="star">Star content</option>
-        </select>
-      </div>-->
-
       <div class="col-sm alert alert-info" role="alert">
+        <select [(ngModel)]="orderProp">
+          <option value="name">A-Z</option>
+          <option value="name">Z-A</option>
+          <option value="id">Date croissante</option>
+          <option value="id">Date décroissante</option>
+        </select>
+      </div>
+
+      <!--<div class="col-sm alert alert-info" role="alert">
         <select [(ngModel)]="competenceFilter">
           <option> </option>
           <option>C#</option>
@@ -27,7 +29,7 @@
           <option>Architecture application</option>
           <option>Architecture systeme</option>
         </select>
-      </div>
+      </div>-->
 
       <div class="col-sm alert alert-info" role="alert">Total d'étudiant: {{students.length}}</div>
   </div>
@@ -37,7 +39,7 @@
 
     <div class="container">
       <!--Main content-->
-      <div class="card" *ngFor="let student of (students | filterArray:query | filterArrayComp:competenceFilter)">
+      <div class="card" *ngFor="let student of (students | filterArray:query | orderby:orderProp)">
         <div class="row">
           <a href="#/students/{{student.id}}" class="col-sm-2 thumb">
             <img class="img-thumbnail profile-img-card" [src]="student.img" alt="Student image"/>

@@ -12,7 +12,7 @@ export class ListStudentComponent implements OnInit {
 
   errorMessage: string;
 
-  orderProp: string;
+  orderProp: string = name;
 
   students = [];
 
@@ -26,6 +26,8 @@ export class ListStudentComponent implements OnInit {
     this.studentsService.getStudents()
       .subscribe(students => {
         this.students = students;
+
+        console.log('coucou ' + this.students[0].id);
         if (students.length === 0) {
           this.errorMessage = 'Empty list of students';
         }else {

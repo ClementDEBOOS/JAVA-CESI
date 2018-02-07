@@ -1,0 +1,30 @@
+{
+  "id": "2",
+  "name": "Nicolas",
+  "first_name": "Pierre",
+  "number_phone": "06.66.23.49.91",
+  "skills" : {
+    "CSharp": 3,
+    "Java": 3,
+    "JEE": 1,
+    "Dotnet": 5,
+    "C": 2,
+    "Python": 4,
+    "HTML": 5,
+    "CSS": 4,
+    "Ruby": 2,
+    "Cobol": 0,
+    "Scala": 1,
+    "Arduino": 2,
+    "JavaScript": 4,
+    "AngularJS": 3,
+    "Angular5": 4,
+    "Ionic_1": 1,
+    "Ionic_2_3": 4,
+    "PowerShell": 0,
+    "PHP": 2
+  },
+  "img": "/assets/images/boss.png",
+  "mail": "nicolas.pierre@gmail.com",
+  "pwd": "azerty"
+}
