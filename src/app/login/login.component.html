@@ -16,7 +16,7 @@
       <div *ngFor="let skill of getStudentSkills(students)">
         <div class="row">
           <div class="col-6">{{ skill }}</div>
-          <div class="col-4"> <star-rating-comp [rating]="students.skills[skill]" [starType]="'svg'"></star-rating-comp></div>
+          <div class="col-4"> <star-rating-comp [rating]="students.skills[skill]" [starType]="'svg'" (onClick)="onClick($event, skill)"></star-rating-comp></div>
         </div><br>
       </div>
       <button class="btn btn-lg btn-success btn-block btn-signin" (click)="sendLogin(myForm)" type="submit">Etape suivante -></button>
@@ -163,6 +163,6 @@
 
     </form><!-- /form -->
 
-  </div><!-- /card-container -->
+  </div><!-- /card-container --><br><br>
 </div><!-- /container -->
 

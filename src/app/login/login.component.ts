@@ -13,7 +13,6 @@ import {OnClickEvent} from 'angular-star-rating';
 })
 export class LoginComponent implements OnInit {
 
-
   students: Student = {
     mail: '',
     first_name: '',
@@ -54,7 +53,6 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router, private studentsService: StudentsService, private route: ActivatedRoute) {
   }
-
   ngOnInit() {
 
   }
@@ -80,7 +78,12 @@ export class LoginComponent implements OnInit {
 
   getStudentSkills(student) {
     return Object.keys(student.skills);
+
   }
+  onClick = ($event: OnClickEvent, skill) => {
+    console.log('onClick $event: ', $event);
+    this.students.skills[skill] = $event.rating;
+  };
   /*onClickResult: OnClickEvent;
   onClickResultJAVA: OnClickEvent;
   onClickResultJEE: OnClickEvent;
