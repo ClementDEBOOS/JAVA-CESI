@@ -24,6 +24,7 @@ import {StudentsService} from './services/students.service';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { StarRatingModule } from 'angular-star-rating';
 import { ValidFormComponent } from './valid-form/valid-form.component';
+import { FormBddComponent } from './form-bdd/form-bdd.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
   { path: 'listStudent', component: ListStudentComponent },
   { path: 'studentDetail/:id', component: StudentDetailComponent },
   { path: 'valid', component: ValidFormComponent },
+  { path: 'formBdd', component: FormBddComponent },
 
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
@@ -60,7 +62,8 @@ const appRoutes: Routes = [
     OrderByPipe,
     FilterArrayCompPipe,
     StudentDetailComponent,
-    ValidFormComponent
+    ValidFormComponent,
+    FormBddComponent
   ],
   imports: [
     BrowserModule,

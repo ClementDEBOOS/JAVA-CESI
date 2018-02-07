@@ -13,7 +13,154 @@
       <input type="Mail" id="inputMail" class="form-control" placeholder="Mail" [(ngModel)]="students.mail" name="mail" required><br>
       <div id="remember" class="checkbox">
       </div><br>
+      <div *ngFor="let skill of getStudentSkills(students)">
+        <div class="row">
+          <div class="col-6">{{ skill }}</div>
+          <div class="col-4"> <star-rating-comp [rating]="students.skills[skill]" [starType]="'svg'"></star-rating-comp></div>
+        </div><br>
+      </div>
       <button class="btn btn-lg btn-success btn-block btn-signin" (click)="sendLogin(myForm)" type="submit">Etape suivante -></button>
+
+    <!--  <div class="row">
+
+        <div class="col-7" role="alert"><strong>C#</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClick($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>JAVA</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickJAVA($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>PHP</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickPHP($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>JEE</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickJEE($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>Dotnet</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickDotnet($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>C</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickC($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>Python</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickPython($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>HTML</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickHTML($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>CSS</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickCSS($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>Ruby</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickRuby($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>Cobol</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickCobol($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>Scala</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickScala($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>Arduino</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickArduino($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>Javascript</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickJavascript($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>AngularJS</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickAngularJS($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>Angular (2/3/4/5)</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickAngular($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>Ionic 1</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickIonic($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>Ionic 2 et/ou 3</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickIonic2($event)">
+        </star-rating-comp></div>
+        <div class="w-100"></div>
+        <div class="col-7" role="alert"><strong>Powershell</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickPowershell($event)">
+        </star-rating-comp></div>
+      </div><br>
+
+      <div class="row">
+        <div class="col-7" role="alert"><strong>SQL</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickSQL($event)">
+        </star-rating-comp></div>
+        <div class="col-7" role="alert"><strong>JSON</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickJSON($event)">
+        </star-rating-comp></div>
+        <div class="col-7" role="alert"><strong>XSL</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickXSL($event)">
+        </star-rating-comp></div>
+        <div class="col-7" role="alert"><strong>XML</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickXML($event)">
+        </star-rating-comp></div>
+      </div><br>-->
+
     </form><!-- /form -->
 
   </div><!-- /card-container -->

@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="card card-container">
+    <img class="image" src="/assets/images/alternancehdCalque.png" width="220" height="80">
+    <p id="profile-name" class="profile-name-card"></p>
+    <!--<p class="profile-name-card">Inscrivez vos compétences dans chaque catégories</p><br>-->
+    <form class="form-signin">
+      <div class="row">
+        <div class="col-7" role="alert"><strong>SQL</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickSQL($event)">
+        </star-rating-comp></div>
+        <!--<p>onClickResult: {{onClickResult | json}}</p>-->
+        <div class="col-7" role="alert"><strong>JSON</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickJSON($event)">
+        </star-rating-comp></div>
+        <div class="col-7" role="alert"><strong>XSL</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickXSL($event)">
+        </star-rating-comp></div>
+        <div class="col-7" role="alert"><strong>XML</strong></div>
+        <div class="col-4"><star-rating-comp   [starType]="'svg'"
+                                               [hoverEnabled]="true"
+                                               (onClick)="onClickXML($event)">
+        </star-rating-comp></div>
+      </div><br>
+      <button class="btn btn-lg btn-success btn-block btn-signin" (click)="sendFormBDD()" type="submit">Valider et envoyer</button>
+    </form>
+  </div>
+</div>

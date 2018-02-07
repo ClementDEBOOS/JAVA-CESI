@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {FormCvComponent} from '../form-cv/form-cv.component';
 
 @Component({
   selector: 'app-valid-form',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./valid-form.component.css']
 })
 export class ValidFormComponent implements OnInit {
-
+  @Input() formCV: FormCvComponent;
   constructor() { }
 
   ngOnInit() {
+    console.log('cvgjknlm;ùm' + this.formCV.onClickResultJAVA);
   }
 
 }

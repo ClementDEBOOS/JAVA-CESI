@@ -15,9 +15,12 @@ export class StudentsService {
   private studentUrl = 'students/students.json';
   private teacherUrl = 'students/teachers.json';
 
+  public data = {};
   constructor(
     private http: HttpClient) {
-
+  }
+  getSkills () {
+    return this.http.get(this.getSkills());
   }
 
   getStudent (studentId): Observable<Student[]> {

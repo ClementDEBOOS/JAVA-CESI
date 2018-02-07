@@ -9,7 +9,3 @@ export class Student {
   skills: Object;
 }
 
-export class Skill {
-  name: string;
-  level: number;
-}
