@@ -3,6 +3,7 @@ import {formArrayNameProvider} from '@angular/forms/src/directives/reactive_dire
 import {Router} from '@angular/router';
 import {StudentsService} from '../services/students.service';
 import {Skill, Student} from '../student';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -29,25 +30,20 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
 
   }
-  sendLogin() {
-    console.log(this.students.name, this.students.pwd);
+  sendLogin(myForm) {
 
-    this.studentsService.getUsers().subscribe((credentials) => {
-      if (credentials.filter( cred => (cred.name === this.students.name) && (cred.pwd === this.students.pwd)).length > 0) {
-        // User valid
+    if (myForm.valid === true) {
         this.router.navigate(['/form']);
         console.log('Valid user');
       } else {
         this.error = {
-          title: 'Identifiant ou mot de passe incorrecte',
-          text: 'Recommencer'
+          title: 'ERREUR',
+          text: 'Vous n\'avez pas correctement rempli tous les champs'
         };
         console.log('Not valid user');
       }
-    });
-  }
+    }
 
-  GoToRegister() {
-    this.router.navigate(['/register']);
-  }
+
+
 }

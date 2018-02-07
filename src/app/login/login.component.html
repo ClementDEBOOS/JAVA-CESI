@@ -5,7 +5,7 @@
     <img id="profile-img" class="profile-img-card" src="/assets/images/student.png"/>
     <p id="profile-name" class="profile-name-card"></p>
     <div class="alert alert-danger" *ngIf="!!error" align="center"><strong>{{ error.title }}<br></strong>{{ error.text }}</div>
-    <form class="form-signin">
+    <form class="form-signin" #myForm="ngForm" (ngSubmit)="sendLogin(myForm)" novalidate>
       <span id="reauth-email" class="reauth-email"></span>
       <input type="name" id="inputName" class="form-control" placeholder="Nom" [(ngModel)]="students.name" name="Name" required autofocus><br>
       <input type="FirstName" id="inputFirstName" class="form-control" placeholder="Prénom" [(ngModel)]="students.first_name" name="first_name" required><br>
@@ -13,7 +13,7 @@
       <input type="Mail" id="inputMail" class="form-control" placeholder="Mail" [(ngModel)]="students.mail" name="mail" required><br>
       <div id="remember" class="checkbox">
       </div><br>
-      <button class="btn btn-lg btn-success btn-block btn-signin" (click)="sendLogin()" type="submit">Etape suivante -></button>
+      <button class="btn btn-lg btn-success btn-block btn-signin" (click)="sendLogin(myForm)" type="submit">Etape suivante -></button>
     </form><!-- /form -->
 
   </div><!-- /card-container -->
