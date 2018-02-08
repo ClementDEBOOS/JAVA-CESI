@@ -55,13 +55,10 @@ export class LoginComponent implements OnInit {
 
   }
 
-
-
   sendLogin(myForm) {
 
     if (myForm.valid === true) {
       this.router.navigate(['/valid']);
-
       console.log('Valid user');
       console.log(this.students.skills);
     } else {
@@ -73,11 +70,6 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  sendStep(myForm) {
-    this.router.navigate(['/form']);
-  }
-
-
   getStudentSkills(student) {
     return Object.keys(student.skills);
 
@@ -85,7 +77,7 @@ export class LoginComponent implements OnInit {
   onClick = ($event: OnClickEvent, skill) => {
     console.log('onClick $event: ', $event);
     this.students.skills[skill] = $event.rating;
-  };
+  }
   /*onClickResult: OnClickEvent;
   onClickResultJAVA: OnClickEvent;
   onClickResultJEE: OnClickEvent;
