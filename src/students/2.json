@@ -22,7 +22,11 @@
     "Ionic_1": 1,
     "Ionic_2_3": 4,
     "PowerShell": 0,
-    "PHP": 2
+    "PHP": 3,
+    "SQL": 2,
+    "JSON": 3,
+    "XSL": 2,
+    "XML": 4
   },
   "img": "/assets/images/boss.png",
   "mail": "nicolas.pierre@gmail.com",

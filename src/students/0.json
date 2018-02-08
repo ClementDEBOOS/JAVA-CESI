@@ -22,7 +22,11 @@
     "Ionic_1": 1,
     "Ionic_2_3": 4,
     "PowerShell": 0,
-    "PHP": 2
+    "PHP": 2,
+    "SQL": 3,
+    "JSON": 2,
+    "XSL": 4,
+    "XML": 4
   },
   "img": "/assets/images/student.png",
   "mail": "paul.pierre@gmail.com",

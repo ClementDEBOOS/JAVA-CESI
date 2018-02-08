@@ -22,7 +22,11 @@
     "Ionic_1": 2,
     "Ionic_2_3": 3,
     "PowerShell": 0,
-    "PHP": 2
+    "PHP": 2,
+    "SQL": 5,
+    "JSON": 4,
+    "XSL": 2,
+    "XML": 4
   },
   "img": "/assets/images/farmer.png",
   "mail": "dylan.metton@gmail.com",

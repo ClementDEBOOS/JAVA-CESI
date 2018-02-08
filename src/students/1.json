@@ -22,7 +22,11 @@
     "Ionic_1": 5,
     "Ionic_2_3": 4,
     "PowerShell": 2,
-    "PHP": 2
+    "PHP": 2,
+    "SQL": 2,
+    "JSON": 3,
+    "XSL": 0,
+    "XML": 0
   },
   "img": "/assets/images/doctor.png",
   "mail": "clotilde.pierre@gmail.com",

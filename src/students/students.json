@@ -23,7 +23,11 @@
       "Ionic_1": 1,
       "Ionic_2_3": 4,
       "PowerShell": 0,
-      "PHP": 2
+      "PHP": 2,
+      "SQL": 3,
+      "JSON": 2,
+      "XSL": 4,
+      "XML": 4
     },
     "img": "/assets/images/student.png",
     "mail": "paul.pierre@gmail.com",
@@ -53,14 +57,18 @@
       "Ionic_1": 5,
       "Ionic_2_3": 4,
       "PowerShell": 2,
-      "PHP": 2
+      "PHP": 2,
+      "SQL": 2,
+      "JSON": 3,
+      "XSL": 0,
+      "XML": 0
     },
     "img": "/assets/images/doctor.png",
     "mail": "clotilde.pierre@gmail.com",
     "pwd": "azerty"
   },
   {
-    "id": "3",
+    "id": "2",
     "name": "Nicolas",
     "first_name": "Pierre",
     "number_phone": "06.66.23.49.91",
@@ -83,14 +91,18 @@
       "Ionic_1": 1,
       "Ionic_2_3": 4,
       "PowerShell": 0,
-      "PHP": 2
+      "PHP": 2,
+      "SQL": 2,
+      "JSON": 3,
+      "XSL": 2,
+      "XML": 4
     },
     "img": "/assets/images/boss.png",
     "mail": "nicolas.pierre@gmail.com",
     "pwd": "azerty"
   },
   {
-    "id": "4",
+    "id": "3",
     "name": "Dylan",
     "first_name": "Metton",
     "number_phone": "06.55.88.75.21",
@@ -113,7 +125,11 @@
       "Ionic_1": 2,
       "Ionic_2_3": 3,
       "PowerShell": 0,
-      "PHP": 2
+      "PHP": 2,
+      "SQL": 5,
+      "JSON": 4,
+      "XSL": 2,
+      "XML": 4
     },
     "img": "/assets/images/farmer.png",
     "mail": "dylan.metton@gmail.com",
