@@ -9,8 +9,15 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { Student } from '../student';
 import { Teacher } from '../teacher';
 
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
+
 @Injectable()
 export class StudentsService {
+
+
   // URL to web API
   private studentUrl = 'students/students.json';
   private teacherUrl = 'students/teachers.json';
@@ -19,9 +26,11 @@ export class StudentsService {
   constructor(
     private http: HttpClient) {
   }
-  getSkills () {
-    return this.http.get(this.getSkills());
+  addSkills (student: Student[]): Observable<Student[]> {
+    return this.http.post<Student[]>(this.studentUrl, student, httpOptions);
   }
+
+
 
   getStudent (studentId): Observable<Student[]> {
     return this.http.get<Student[]>('students/' + studentId + '.json')

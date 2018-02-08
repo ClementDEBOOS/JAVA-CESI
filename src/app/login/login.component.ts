@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {formArrayNameProvider} from '@angular/forms/src/directives/reactive_directives/form_group_name';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import {StudentsService} from '../services/students.service';
 import { Student} from '../student';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {OnClickEvent} from 'angular-star-rating';
 
 @Component({
@@ -57,11 +55,15 @@ export class LoginComponent implements OnInit {
 
   }
 
+
+
   sendLogin(myForm) {
 
     if (myForm.valid === true) {
-      this.router.navigate(['/valid']);
+      /*this.router.navigate(['/valid']);*/
+
       console.log('Valid user');
+      console.log(this.students.skills);
     } else {
       this.error = {
         title: 'ERREUR',
