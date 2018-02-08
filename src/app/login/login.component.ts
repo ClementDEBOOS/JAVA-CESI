@@ -60,7 +60,7 @@ export class LoginComponent implements OnInit {
   sendLogin(myForm) {
 
     if (myForm.valid === true) {
-      /*this.router.navigate(['/valid']);*/
+      this.router.navigate(['/valid']);
 
       console.log('Valid user');
       console.log(this.students.skills);
