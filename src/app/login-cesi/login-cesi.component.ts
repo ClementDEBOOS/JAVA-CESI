@@ -39,18 +39,5 @@ export class LoginCesiComponent implements OnInit {
         console.log('Not valid user');
       }
     });
-
-
-    /*
-    // Fonction onchange regex
-    if (this.user.mail === 'clement' && this.user.pwd === 'azerty') {
-      this.router.navigate(['/home']);
-    }else {
-      this.error = {
-        title: 'Identifiant ou mot de passe incorrecte',
-        text: 'Recommencer'
-      };
-    }
-    */
   }
 }
